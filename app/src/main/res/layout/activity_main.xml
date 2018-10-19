@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <Button
+            android:id="@+id/btn_detect"
+            android:text="DETEKSI"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.wonderkiln.camerakit.CameraView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/camera_view"
+            android:layout_above="@+id/btn_detect"></com.wonderkiln.camerakit.CameraView>
+
+    <dev.prab.facedetection.Helper.GraphicOverlay
+            android:id="@+id/graphic_overlay"
+            android:layout_above="@+id/btn_detect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5537249287674941/6448011287">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
